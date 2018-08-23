@@ -1,7 +1,9 @@
-const herokuAPI = "https://back-allende.herokuapp.com";
+//const herokuAPI = "https://allende-frontend.herokuapp.com";
+//const localAPI = "http://localhost:3000";
+const herokuMIO = "https://stark-fortress-68174.herokuapp.com";
 
 export function logIn(user){
-  return fetch(herokuAPI + '/login', {
+  return fetch(herokuMIO + '/login', {
     method: 'POST',
     headers: {
       "Content-Type": "application/json"
@@ -10,4 +12,4 @@ export function logIn(user){
   })
     .then(r => r.json())
     .then(user => user);
-}
+};
